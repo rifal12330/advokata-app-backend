@@ -22,7 +22,8 @@ app.post('/api/auth/login', loginValidation, loginUser);
 // Koneksi ke database
 connectDB();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;  // Default to 8080 if no dynamic PORT is provided
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
